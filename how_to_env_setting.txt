@@ -1,0 +1,10 @@
+conda env create -f environment.yaml
+conda activate ELRVD
+conda install -c conda-forge cudatoolkit-dev=11.3 -y
+apt install -y g++-9
+update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-9 9
+update-alternatives --set g++ /usr/bin/g++-9
+update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-9 9
+update-alternatives --set gcc /usr/bin/gcc-9
+CUDA_HOME=/venv/ELRVD TORCH_CUDA_ARCH_LIST="8.6" python setup.py build develop
+pip install git+https://github.com/cheind/pytorch-debayer

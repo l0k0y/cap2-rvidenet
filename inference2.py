@@ -79,6 +79,7 @@ device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 model = torch.load(os.path.expanduser("./inference/models/denoiser/model_epoch500.pth")).cuda()
 
 input_files = sorted(glob.glob(os.path.join(args.input_dir, '*.raw')))
+#input_files = input_files[:1] 
 if not os.path.isdir(args.output_dir):
     os.makedirs(args.output_dir)
 

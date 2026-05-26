@@ -5,6 +5,7 @@ mkdir -p ./inference/models/isp
 mkdir -p ./inference/models/denoiser
 mkdir -p ./inference/data/input
 mkdir -p ./inference/data/output
+mkdir -p ./inference/data/gt_raw
 mkdir -p ./inference/data/rgb_input
 mkdir -p ./inference/data/rgb_output
  
